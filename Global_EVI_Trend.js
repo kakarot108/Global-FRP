@@ -1,3 +1,4 @@
+**
 var mod13 = ee.ImageCollection('MODIS/006/MOD13A1');
 var coll = mod13.select('EVI')
     .filter(ee.Filter.calendarRange(8, 9, 'month'));
@@ -145,3 +146,5 @@ Map.addLayer(p, {min: 0, max: 1}, 'p');
 // Specifically, if the true trend is zero, there would be less than 5%
 // chance of randomly obtaining the observed result (that there is a trend).
 Map.addLayer(p.lte(0.025), {min: 0, max: 1}, 'significant trends');
+
+**
